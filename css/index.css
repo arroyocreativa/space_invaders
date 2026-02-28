@@ -90,6 +90,19 @@ body {
   cursor: pointer;
 }
 
+#music-on, #music-off {
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  color: #e7e7e7;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 #menu-button {
   font-family: 'Bungee Inline', cursive;
   font-size: 23px;
@@ -275,11 +288,11 @@ body {
 
 #ufo {
   position: absolute;
-  left: 344px;
-  bottom: 226px;
+  left: 348px;
+  bottom: 218px;
 
-  height: 32px;
-  width: 55px;
+  height: 34px;
+  width: 30px;
 }
 
 #play-game {
