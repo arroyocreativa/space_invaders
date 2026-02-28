@@ -1,19 +1,28 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  background-color: #070707;
-
+  background-color: #000;
   padding: 0;
   margin: 0;
   border: 0;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 #container {
-  height: 600px;
-  width: 900px;
+  width: min(100vw, 150vh);
+  aspect-ratio: 3 / 2;
   position: relative;
   background-color: #000;
 }
@@ -22,25 +31,29 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 #invader-info {
   position: absolute;
-  bottom: 230px;
-  left: 415px;
+  bottom: 38%;
+  left: 46%;
 
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 
-  width: 200px;
-  height: 145px;
+  width: 22%;
+  height: 24%;
 
   font-family: 'Bungee Inline', cursive;
-  font-size: 20px;
+  font-size: clamp(10px, 2.2vw, 20px);
   color: #fff;
 }
 
@@ -52,34 +65,34 @@ body {
 
 #splash-instruction {
   position: absolute;
-  bottom: 170px;
-  left: 215px;
-  width: 500px;
-  height: 40px;
+  bottom: 28%;
+  left: 24%;
+  width: 56%;
+  height: 6.7%;
 
   text-align: center;
   font-family: 'Bungee Inline', cursive;
-  font-size: 23px;
+  font-size: clamp(11px, 2.5vw, 23px);
   color: #fff;
   letter-spacing: 2px;
 }
 
 #audio {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 1.7%;
+  right: 1.1%;
 
-  height: 40px;
-  width: 40px;
+  height: 6.7%;
+  width: 4.4%;
 }
 
 #mute {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 1.7%;
+  right: 1.1%;
 
-  height: 40px;
-  width: 40px;
+  height: 6.7%;
+  width: 4.4%;
 }
 
 #audio:hover {
@@ -92,28 +105,28 @@ body {
 
 #music-on, #music-off {
   position: absolute;
-  bottom: 10px;
-  right: 60px;
-  height: 40px;
-  width: 40px;
+  bottom: 1.7%;
+  right: 6.7%;
+  height: 6.7%;
+  width: 4.4%;
   background: transparent;
   border: none;
   color: #e7e7e7;
-  font-size: 22px;
+  font-size: clamp(11px, 2.4vw, 22px);
   cursor: pointer;
 }
 
 #menu-button {
   font-family: 'Bungee Inline', cursive;
-  font-size: 23px;
+  font-size: clamp(11px, 2.5vw, 23px);
   color: #e7e7e7;
 
   position: absolute;
-  top: 11px;
-  left: 420px;
+  top: 1.8%;
+  left: 47%;
 
-  width: 300px;
-  height: 30px;
+  width: 33%;
+  height: 5%;
   z-index: 5;
 }
 
@@ -124,8 +137,8 @@ body {
 
 #menu-container {
   position: absolute;
-  bottom: 100px;
-  left: 300px;
+  bottom: 17%;
+  left: 33%;
 
   display: flex;
   flex-direction: column;
@@ -133,11 +146,11 @@ body {
   justify-content: space-around;
 
   background-color: grey;
-  height: 400px;
-  width: 300px;
+  height: 67%;
+  width: 33%;
 
   font-family: 'Bungee Inline', cursive;
-  font-size: 22px;
+  font-size: clamp(10px, 2.4vw, 22px);
   letter-spacing: 2px;
   color: #fff;
 
@@ -161,12 +174,12 @@ body {
   padding: 0 10px 0 10px;
 
   position: absolute;
-  bottom: 100px;
-  left: 300px;
+  bottom: 17%;
+  left: 33%;
 
   background-color: grey;
-  height: 400px;
-  width: 300px;
+  height: 67%;
+  width: 33%;
 
   font-family: 'Bungee Inline', cursive;
   letter-spacing: 1px;
@@ -189,7 +202,7 @@ body {
 }
 
 #close-about {
-  margin-left: 200px;
+  margin-left: 67%;
   margin-top: 5px;
   color: #fff;
 }
@@ -208,12 +221,12 @@ body {
   padding: 0 15px 0 15px;
 
   position: absolute;
-  bottom: 100px;
-  left: 300px;
+  bottom: 17%;
+  left: 33%;
 
   background-color: grey;
-  height: 400px;
-  width: 300px;
+  height: 67%;
+  width: 33%;
 
   font-family: 'Bungee Inline', cursive;
   letter-spacing: 1px;
@@ -225,14 +238,9 @@ body {
 }
 
 #close-instructions {
-  margin-left: 200px;
+  margin-left: 67%;
   margin-top: 5px;
   color: #fff;
-}
-
-#close-instructions:hover {
-  cursor: pointer;
-  color: #ffff6d;
 }
 
 #close-instructions:hover {
@@ -252,63 +260,63 @@ body {
 
 #main-logo {
   position: absolute;
-  top: 10px;
-  left: 215px;
+  top: 1.7%;
+  left: 24%;
 
-  height: 210px;
-  width: 500px;
+  height: 35%;
+  width: 56%;
 }
 
 #grunt-1 {
   position: absolute;
-  left: 355px;
-  bottom: 350px;
+  left: 39%;
+  bottom: 58%;
 
-  height: 30px;
-  width: 30px;
+  height: 5%;
+  width: 3.3%;
 }
 
 #soldier-1 {
   position: absolute;
-  left: 355px;
-  bottom: 310px;
+  left: 39%;
+  bottom: 52%;
 
-  height: 30px;
-  width: 30px;
+  height: 5%;
+  width: 3.3%;
 }
 
 #invader-1 {
   position: absolute;
-  left: 355px;
-  bottom: 270px;
+  left: 39%;
+  bottom: 45%;
 
-  height: 30px;
-  width: 30px;
+  height: 5%;
+  width: 3.3%;
 }
 
 #ufo {
   position: absolute;
-  left: 348px;
-  bottom: 218px;
+  left: 39%;
+  bottom: 36%;
 
-  height: 34px;
-  width: 30px;
+  height: 5.7%;
+  width: 3.3%;
 }
 
 #play-game {
   position: absolute;
-  bottom: 30px;
-  left: 307px;
+  bottom: 5%;
+  left: 34%;
 
   z-index: 5;
-  height: 50px;
-  width: 300px;
+  height: 8.3%;
+  width: 33%;
   transition: all .2s ease-in;
   border: 2px solid #fff;
   border-radius: 3px;
 
   font-family: 'Bungee Inline', cursive;
-  font-size: 23px;
+  font-size: clamp(11px, 2.5vw, 23px);
   color: #fff;
   letter-spacing: 2px;
 }
@@ -343,6 +351,47 @@ body {
 #game-over {
   position: absolute;
   z-index: 5;
-  bottom: 150px;
-  left: 180px;
+  bottom: 25%;
+  left: 20%;
+  max-width: 60%;
 }
+
+/* ─── Controles táctiles ─── */
+
+#touch-controls {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #touch-controls { display: block; }
+}
+
+.touch-btn {
+  position: absolute;
+  bottom: 5%;
+  width: 13%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font-size: clamp(16px, 3.5vw, 32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+#touch-left  { left: 3%; }
+#touch-right { left: 18%; }
+#touch-fire  { right: 3%; width: 15%; background: rgba(255, 0, 255, 0.15); }
